@@ -6,10 +6,6 @@
 //
 
 import UIKit
-import Moya
-import Kingfisher
-import RxCocoa
-import RxSwift
 
 class ViewController: UIViewController {
 
