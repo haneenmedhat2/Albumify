@@ -60,13 +60,13 @@ class ProfileController: UIViewController {
     //MARK: - Cell selection setup
 
     func setupCellSelection(){
-//        tableView.rx.modelSelected(Albums.self)
-//            .subscribe(onNext: { [weak self] selectedItem in
-//                guard let self = self else {return}
-//                let detailsController = self.storyboard?.instantiateViewController(withIdentifier: "details") as! AlbumDetailsController
-//                detailsController.album = selectedItem
-//                self.navigationController?.pushViewController(detailsController, animated: true)
-//            }).disposed(by: disposeBag)
+        tableView.rx.modelSelected(Albums.self)
+            .subscribe(onNext: { [weak self] selectedItem in
+                guard let self = self else {return}
+                let detailsController = self.storyboard?.instantiateViewController(withIdentifier: "details") as! AlbumDetailsController
+                detailsController.album = selectedItem
+                self.navigationController?.pushViewController(detailsController, animated: true)
+            }).disposed(by: disposeBag)
    }
 }
 

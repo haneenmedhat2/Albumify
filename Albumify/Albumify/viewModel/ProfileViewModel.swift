@@ -30,7 +30,11 @@ class ProfileViewModel{
                     {   print("No user found")
                         return
                     }
-                    self.userPubSub.onNext(randomUser)
+                    guard let firstUser = users.first else
+                    {   print("No user found")
+                        return
+                    }
+                    self.userPubSub.onNext(firstUser)
                 
                 }catch(let error){
                     print("Error in decoding user's data \(error)")
