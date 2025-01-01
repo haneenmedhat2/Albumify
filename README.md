@@ -1,5 +1,5 @@
 ## Albumify
-* Albumify is a simple yet elegant iOS application built using Swift that showcases a user's albums and photos fetched from the JSONPlaceholder API. The app demonstrates clean architecture, efficient use of MVVM design patterns, and modern Swift features.
+* Albumify is a simple iOS application built using Swift that showcases a user's albums and photos fetched from the JSONPlaceholder API. The app demonstrates clean architecture, efficient use of MVVM design patterns, and modern Swift features.
 
 ## Environment:
 * Xcode.
