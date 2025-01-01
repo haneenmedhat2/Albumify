@@ -211,8 +211,65 @@
             </objects>
             <point key="canvasLocation" x="1773.913043478261" y="49.553571428571423"/>
         </scene>
+        <!--Image Viewer-->
+        <scene sceneID="TTj-Fs-kOS">
+            <objects>
+                <viewController storyboardIdentifier="imageViewer" id="gQ7-2u-Wst" customClass="ImageViewerController" customModule="Albumify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="poV-eL-1Pp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bu7-FD-INW">
+                                <rect key="frame" x="0.0" y="111" width="414" height="298"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Kri-2d-ODy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bu7-FD-INW" firstAttribute="leading" secondItem="Kri-2d-ODy" secondAttribute="leading" id="8xS-Qb-BkO"/>
+                            <constraint firstItem="bu7-FD-INW" firstAttribute="top" secondItem="Kri-2d-ODy" secondAttribute="top" constant="23" id="f8U-lH-MDJ"/>
+                            <constraint firstItem="Kri-2d-ODy" firstAttribute="trailing" secondItem="bu7-FD-INW" secondAttribute="trailing" id="jBw-EL-0ga"/>
+                            <constraint firstItem="bu7-FD-INW" firstAttribute="height" secondItem="poV-eL-1Pp" secondAttribute="height" multiplier="0.332589" id="rRP-Pb-tTo"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Image Viewer" id="tgH-nx-tlZ">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="ZMY-FP-Cx8">
+                            <connections>
+                                <action selector="shareBtn:" destination="gQ7-2u-Wst" id="5CQ-ha-bgU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="bu7-FD-INW" id="1gY-z1-E5w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rxO-Dz-Wfu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4410.144927536232" y="49.553571428571423"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="p0f-Jc-Qdr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PvV-VZ-P0k" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qOS-18-0wl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gQ7-2u-Wst" kind="relationship" relationship="rootViewController" id="Fgj-ir-MVS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cyO-9e-BfD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3500.0000000000005" y="49.553571428571423"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

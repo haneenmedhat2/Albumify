@@ -64,13 +64,13 @@ class AlbumDetailsController: UIViewController {
     //MARK: - Cell selection setup
 
     func setupCellSelection(){
-//        collectionView.rx.modelSelected(Photos.self)
-//            .subscribe(onNext: { [weak self] selectedItem in
-//                guard let self = self else {return}
-//                let viewerController = self.storyboard?.instantiateViewController(withIdentifier: "imageViewer") as! ImageViewerController
-//                viewerController.photo = selectedItem
-//                self.navigationController?.pushViewController(viewerController, animated: true)
-//            }).disposed(by: disposeBag)
+        collectionView.rx.modelSelected(Photos.self)
+            .subscribe(onNext: { [weak self] selectedItem in
+                guard let self = self else {return}
+                let viewerController = self.storyboard?.instantiateViewController(withIdentifier: "imageViewer") as! ImageViewerController
+                viewerController.photo = selectedItem
+                self.navigationController?.pushViewController(viewerController, animated: true)
+            }).disposed(by: disposeBag)
     }
 }
 
